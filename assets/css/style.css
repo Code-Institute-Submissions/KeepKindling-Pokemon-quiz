@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Mako&display=swap');
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/assets/images/background-image.jpg);
+    color: black;
+    text-align: center;
+    font-family: Mako;
+}
+
+#head {
+    font-size: 200%;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding-bottom: 30px;
+    
+}
+
+#rules {
+    font-size: 150%;
+    width: 80%;
+    background-color: gold;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    border: 2spx solid black;
+}
+
+#button {
+    background-color: #d47516;
+    border: none;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 30%;
+  }
+
+  #questions {
+    font-size: 34px;
+    text-transform: capitalize;
+    width: 70%;
+    height: auto;
+    padding: 15px;
+  }
+
+  #answer-box {
+    background-color: gold;
+    border-radius: 40px;
+    margin: 30px;
+    height: 250px;
+  }
+
+  #answer {
+    height: 20%;
+    background-color:white;
+    width: 90%;
+    margin-top: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #score-box {
+    background-color: #d47516;
+    float: left;
+    width: 20%;
+    height: 120px;
+    margin-left: 300px;
+    border: 2px solid gold;
+  }
+
+  #timer-box {
+    background-color: #d47516;
+    float: right;
+    width: 20%;
+    height: 120px;
+    margin-right: 300px;
+    border: 2px solid gold;
+  }
