@@ -4,63 +4,83 @@ startButton.addEventListener('click', runGame())
 
 let questions = [{
     question: 'How old was Ashe when he began his journey?',
-    choice_1: '12',
-    choice_2: '10',
-    choice_3: '11',
+    answers: [
+        { text: '12', correct: true},
+        { text: '10', correct: false},
+        { text: '11', correct: false}
+    ]
 },
 {
     question: 'What is Mistys favorite Pokemon?',
-    choice_1: 'Seel',
-    choice_2: 'Starmie',
-    choice_3: 'Staryu'
+    answers: [
+        { text: 'Staryu', correct: true},
+        { text: 'Seel', correct: false},
+        { text: 'Starmie', correct: false}
+    ]
 },
 {
     question: 'How many siblings does Brock have?',
-    choice_1: '9',
-    choice_2: '5',
-    choice_3: '3'
+    answers: [
+        { text: '9', correct: true},
+        { text: '5', correct: false},
+        { text: '3', correct: false}
+    ]
 },
 {
     question: "Who is Ashe's rival?",
-    choice_1: 'Gary',
-    choice_2: 'Brock',
-    choice_3: 'Misty'
+    answers: [
+        { text: 'Gary', correct: true},
+        { text: 'Brock', correct: false},
+        { text: 'Misty', correct: false}
+    ]
 },
 {
     question: 'What was the first Pokemon that Ashe caught?',
-    choice_1: 'Pidgey',
-    choice_2: 'Mankey',
-    choice_3: 'Caterpie'
+    answers: [
+        { text: 'Caterpie', correct: true},
+        { text: 'Mankey', correct: false},
+        { text: 'Pidgey', correct: false}
+    ]
 },
 {
     question: 'Which giant Pokemon attacked the city Porta Vista?',
-    choice_1: 'Kangaskhan',
-    choice_2: 'Tentacruel',
-    choice_3: 'Rhydon'
+    answers: [
+        { text: 'Tentacruel', correct: true},
+        { text: 'Kangaskhan', correct: false},
+        { text: 'Rhydon', correct: false}
+    ]
 },
 {
     question: 'How does Pikachu evolve into Riachu?',
-    choice_1: 'Thunder stone',
-    choice_2: 'Lightning stone',
-    choice_3: 'Electric stone'
+    answers: [
+        { text: 'Thunder stone', correct: true},
+        { text: 'Lightning stone', correct: false},
+        { text: 'Electric stone', correct: false}
+    ]
 },
 {
     question: 'Why was Ashe late to picking his first Pokemon?',
-    choice_1: "His mother's car wouldnt start",
-    choice_2: 'He was ambushed by Team Rocket',
-    choice_3: 'He overslept'
+    answers: [
+        { text: 'He overslept', correct: true},
+        { text: 'His mums car would not start', correct: false},
+        { text: 'He was ambushed by team rocket', correct: false}
+    ]
 },
 {
     question: 'What did Ashe steal from Misty?',
-    choice_1: 'A Gym Badge',
-    choice_2: 'A bike',
-    choice_3: 'A scooter'
+    answers: [
+        { text: 'A Bike', correct: true},
+        { text: 'A Gym Badge', correct: false},
+        { text: 'A Scooter', correct: false}
+    ]
 },
 {
     question: 'How many Pokemon are there?',
-    choice_1: '172',
-    choice_2: '158',
-    choice_3: '151'
+    answers: [
+        { text: '151', correct: true},
+        { text: '162', correct: false},
+        { text: '157', correct: false}
+    ]
 },
 ]
 
