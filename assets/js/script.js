@@ -1,8 +1,12 @@
+const startButton = document.getElementById('start');
+
+startButton.addEventListener('click', runGame())
+
 let questions = [{
     question: 'How old was Ashe when he began his journey?',
     choice_1: '12',
     choice_2: '10',
-    choice_3: '11'
+    choice_3: '11',
 },
 {
     question: 'What is Mistys favorite Pokemon?',
@@ -59,3 +63,31 @@ let questions = [{
     choice_3: '151'
 },
 ]
+
+function runGame() {
+    console.log("started game");
+}
+
+function selectNextQuestion() {
+
+}
+
+function selectAnswer() {
+
+}
+
+function checkAnswer() {
+
+}
+
+function incrementScore() {
+
+}
+
+function incrementIncorrect() {
+
+}
+
+function runTime() {
+
+}
