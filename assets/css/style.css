@@ -30,7 +30,7 @@ body {
   border: 2spx solid black;
 }
 
-#button {
+.button {
   background-color: #d47516;
   border: none;
   color: white;
@@ -42,13 +42,21 @@ body {
   border-radius: 30%;
 }
 
-#button:hover {
+.button:hover {
   color: #d47516;
   border: 2px solid #d47516;
   background-color: white;
 }
 
-#questions {
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+#question-container {
   font-size: 34px;
   text-transform: capitalize;
   width: 70%;
@@ -73,7 +81,7 @@ body {
   cursor: pointer;
 }
 
-#answer:hover {
+.answer:hover {
   background-color: black;
   color: white;
   border: 1px solid white;
