@@ -1,6 +1,8 @@
 const startButton = document.getElementById('start');
-const questionElement = document.getElementById('question-container');
+const questionContainerElement = document.getElementById('question-container');
 const answerElement = document.getElementById('answer');
+const questionElement = document.getElementById('question')
+const answerButtonElement = document.getElementById('answer-button')
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -9,11 +11,15 @@ function startGame() {
     startButton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
-    selectNextQuestion
+    selectNextQuestion()
 }
 
 function selectNextQuestion() {
+    displayQuestion(shuffledQuestions[currentQuestionIndex])
+}
 
+function showQuestion () {
+    questionElement.innerText = question.question
 }
 
 function selectAnswer() {
@@ -36,7 +42,7 @@ function runTime() {
 
 }
 
-let questions = [{
+const questions = [{
     question: 'How old was Ashe when he began his journey?',
     answers: [
         { text: '12', correct: true},
