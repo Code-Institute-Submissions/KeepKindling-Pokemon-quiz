@@ -3,22 +3,25 @@ const questionContainerElement = document.getElementById('question-container');
 const answerElement = document.getElementById('answer');
 const questionElement = document.getElementById('question')
 const answerButtonElement = document.getElementById('answer-button')
-
+ 
 let shuffledQuestions, currentQuestionIndex
 
-function startGame() {
-    console.log("Game Started!")
-    startButton.classList.add('hide')
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
-    selectNextQuestion()
+function displayQuestion() {
+
 }
 
 function selectNextQuestion() {
     displayQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
-function showQuestion () {
+function startGame() {
+    console.log("Game Started!")
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    currentQuestionIndex = 0
+    selectNextQuestion()
+}
+
+function displayQuestion (question) {
     questionElement.innerText = question.question
 }
 
@@ -123,3 +126,5 @@ const questions = [{
     ]
 },
 ]
+
+startGame();
