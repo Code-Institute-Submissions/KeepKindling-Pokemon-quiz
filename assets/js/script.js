@@ -3,11 +3,22 @@ const questionContainerElement = document.getElementById('question-container');
 const answerElement = document.getElementById('answer');
 const questionElement = document.getElementById('question')
 const answerButtonElement = document.getElementById('answer-button')
+const answerBoxElement = document.getElementById('answer-box')
  
 let shuffledQuestions, currentQuestionIndex
 
-function displayQuestion() {
-
+function displayQuestion (question) {
+    questionElement.innerText = question.question
+    question.answers.forEach(answer => {
+        const button = document.createElement('button')
+        button.innerText = answer.text
+        button.classList.add('button')
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click', selectAnswer)
+        answerButtonElement.appendChild('button')
+    }) 
 }
 
 function selectNextQuestion() {
@@ -21,11 +32,7 @@ function startGame() {
     selectNextQuestion()
 }
 
-function displayQuestion (question) {
-    questionElement.innerText = question.question
-}
-
-function selectAnswer() {
+function selectAnswer(e) {
 
 }
 

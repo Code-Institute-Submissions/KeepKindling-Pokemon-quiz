@@ -71,7 +71,7 @@ body {
   height: 250px;
 }
 
-.answer {
+#answer {
   height: 20%;
   background-color:white;
   width: 90%;
@@ -79,9 +79,10 @@ body {
   border: 1px solid black;
   border-radius: 4px;
   cursor: pointer;
+  color: black;
 }
 
-.answer:hover {
+#answer:hover {
   background-color: black;
   color: white;
   border: 1px solid white;
