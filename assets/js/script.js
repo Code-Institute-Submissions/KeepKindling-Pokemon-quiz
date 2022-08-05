@@ -4,12 +4,14 @@ const answerElement = document.getElementById('answer');
 const questionElement = document.getElementById('question')
 const answerButtonElement = document.getElementById('answer-button')
 const answerBoxElement = document.getElementById('answer-box')
- 
+  
 let shuffledQuestions, currentQuestionIndex
 
 function displayQuestion (question) {
     questionElement.innerText = question.question
+    answerBoxElement.innerHTML = ''
     question.answers.forEach(answer => {
+        console.log(answerButtonElement)
         const button = document.createElement('button')
         button.innerText = answer.text
         button.classList.add('button')
@@ -17,7 +19,7 @@ function displayQuestion (question) {
             button.dataset.correct = answer.correct
         }
         button.addEventListener('click', selectAnswer)
-        answerButtonElement.appendChild('button')
+        answerBoxElement.appendChild(button)
     }) 
 }
 
@@ -33,7 +35,14 @@ function startGame() {
 }
 
 function selectAnswer(e) {
-
+    let clickedButton = e.target
+    console.log(clickedButton)
+    if (clickedButton.dataset.correct == 'true') {
+        incrementScore()
+    } else {
+        incrementIncorrect()
+    }
+    selectNextQuestion()
 }
 
 function checkAnswer() {
@@ -41,11 +50,11 @@ function checkAnswer() {
 }
 
 function incrementScore() {
-
+    console.log('score + 1')
 }
 
 function incrementIncorrect() {
-
+    console.log('score incorrect')
 }
 
 function runTime() {
