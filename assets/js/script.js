@@ -4,7 +4,9 @@ const answerElement = document.getElementById('answer');
 const questionElement = document.getElementById('question')
 const answerButtonElement = document.getElementById('answer-button')
 const answerBoxElement = document.getElementById('answer-box')
-  
+const scoreElement = document.getElementById('score')
+
+let integer = 0
 let shuffledQuestions, currentQuestionIndex
 
 function displayQuestion (question) {
@@ -51,10 +53,14 @@ function checkAnswer() {
 
 function incrementScore() {
     console.log('score + 1')
+    let oldScore = parseInt(document.getElementById("score").innerText);
+	document.getElementById("score").innerText = ++oldScore + "/10";
 }
 
 function incrementIncorrect() {
     console.log('score incorrect')
+    let oldScore = parseInt(document.getElementById("score").innerText);
+	document.getElementById("score").innerText = oldScore + "/10";
 }
 
 function runTime() {
