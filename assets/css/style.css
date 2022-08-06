@@ -17,8 +17,7 @@ body {
   font-size: 200%;
   text-decoration: none;
   letter-spacing: 1px;
-  padding-bottom: 30px;
-    
+  padding-bottom: 30px;  
 }
 
 #rules {
@@ -28,6 +27,7 @@ body {
   margin-bottom: 30px;
   border-radius: 12px;
   border: 2spx solid black;
+  padding-bottom: 20px;
 }
 
 .button {
@@ -39,14 +39,27 @@ body {
   font-size: 16px;
   cursor: pointer;
   border: 2px solid white;
-  border-radius: 30%;
   width: 80%;
+  margin: 0.9rem;
 }
 
 .button:hover {
   color: #d47516;
   border: 2px solid #d47516;
   background-color: white;
+}
+
+#beginGame {
+  background-color: #d47516;
+  border: none;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid white;
+  width: 80%;
+  margin: 0.9rem;
 }
 
 .hide {
