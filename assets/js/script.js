@@ -9,6 +9,11 @@ const scoreElement = document.getElementById('score')
 let integer = 0
 let shuffledQuestions, currentQuestionIndex
 
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++
+    selectNextQuestion()
+  })
+
 function displayQuestion (question) {
     questionElement.innerText = question.question
     answerBoxElement.innerHTML = ''
@@ -45,10 +50,6 @@ function selectAnswer(e) {
         incrementIncorrect()
     }
     selectNextQuestion()
-}
-
-function checkAnswer() {
-
 }
 
 function incrementScore() {

@@ -70,6 +70,21 @@ body {
   display: flex;
 }
 
+.control-button {
+  width: 90px;
+  height: 50px;
+  margin: 6px;
+  color: white;
+  background-color: gold;
+  border: none;
+}
+
+.control-button:hover {
+  color: gold;
+  background-color: white;
+  border: 2px solid gold;
+}
+
 #question-container {
   font-size: 34px;
   text-transform: capitalize;
