@@ -1,14 +1,15 @@
-const startButton = document.getElementById('start');
+const startButton = document.getElementById('startButton');
 const questionContainerElement = document.getElementById('question-container');
 const answerElement = document.getElementById('answer');
 const questionElement = document.getElementById('question')
 const answerButtonElement = document.getElementById('answer-button')
 const answerBoxElement = document.getElementById('answer-box')
 const scoreElement = document.getElementById('score')
-
+ 
 let integer = 0
 let shuffledQuestions, currentQuestionIndex
 
+startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     selectNextQuestion()
@@ -38,24 +39,39 @@ function startGame() {
     console.log("Game Started!")
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
+    integer = 0
+    displayScore()
     selectNextQuestion()
 }
 
 function selectAnswer(e) {
     let clickedButton = e.target
     console.log(clickedButton)
+    let classToAdd
     if (clickedButton.dataset.correct == 'true') {
         incrementScore()
+        classToAdd = 'correct'
     } else {
         incrementIncorrect()
+        classToAdd = 'incorrect'
     }
-    selectNextQuestion()
+    // selectNextQuestion()
+    clickedButton.classList.add(classToAdd)
+    setTimeout(() => {
+        currentQuestionIndex++
+        selectNextQuestion()
+    }, 1000)
+
+}
+
+function displayScore () {
+    document.getElementById("score").innerText = integer + "/10";
 }
 
 function incrementScore() {
     console.log('score + 1')
-    let oldScore = parseInt(document.getElementById("score").innerText);
-	document.getElementById("score").innerText = ++oldScore + "/10";
+    integer++
+	displayScore()
 }
 
 function incrementIncorrect() {
@@ -64,9 +80,7 @@ function incrementIncorrect() {
 	document.getElementById("score").innerText = oldScore + "/10";
 }
 
-function runTime() {
 
-}
 
 const questions = [{
     question: 'How old was Ashe when he began his journey?',

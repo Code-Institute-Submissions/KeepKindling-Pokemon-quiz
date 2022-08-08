@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 } 
- 
+  
 body {
   background-image: url(/assets/images/background-image.jpg);
   color: black;
@@ -41,6 +41,14 @@ body {
   border: 2px solid white;
   width: 80%;
   margin: 0.9rem;
+}
+
+.button.correct {
+  background-color: green !important;
+}
+
+.button.incorrect {
+  background-color: red !important;
 }
 
 .button:hover {
