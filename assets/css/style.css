@@ -25,7 +25,7 @@ body {
   background-color: gold;
   margin-bottom: 30px;
   border-radius: 12px;
-  border: 2spx solid black;
+  border: 2px solid black;
   padding-bottom: 20px;
 }
 
@@ -107,7 +107,7 @@ body {
   height: 250px;
 }
 
-#answer {
+#answer1 #answer2 #answer3 {
   height: 20%;
   background-color:white;
   width: 90%;
@@ -118,7 +118,7 @@ body {
   color: black;
 }
 
-#answer:hover {
+#answer1:hover #answer2:hover #answer3:hover {
   background-color: black;
   color: white;
   border: 1px solid white;
