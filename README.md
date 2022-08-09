@@ -52,11 +52,28 @@ The questions section will automatically display a question that is randomly pic
 
 This box holds the different answer's that the user may pick from when making a decision. There are always three to choose from. The answers are inside of buttons that have been styled to have a white outline and a brown background as it fit's the color scheme and doesn't take away from the user's visual representation of the site. The correct answer will move randomly between these buttons so user's can't pick the same button for every question making an easy quiz.
 
-## Score and Timer section's
+## Score section
 
-These little boxes located at the bottom left and right of the page keep's track of the user's score out of /10 as well as the time talken to answer the questions. If the user is correct, the score will go up by 1, otherwise the score will remain the same. The timer will keep running until the final question has been answered. These boxes have the same style with a gold outline and brown background whilst the text inside remains black. This keeps everything readable and fair.
+This small container is located underneath the answers container at the bottom of the screen and 
+keep's a record of how many questions the user has gotten correct out of /10. It utilizes the same colour's as the answer boxes but instead has a border of gold to keep them seperated. This way the user can easily discern they are different.
 
 ## Restart Game button
 
+This last feature is at the bottom of the game page and when pressed, reverts the score to 0/10 and shuffles the questions again. The text is white while the background and border are brown and gold.
 
 
+
+# page design
+
+## Colour Scheme
+
+The site uses 6 overall colours but only 4 are for the general theme of the site. The colours are white, black, gold, brown = d47516#, red and green. White and black are used as easily distinguishable text amoung brown and gold background's. I chose yo use gold and brown as the bulk colour of the site as they are playful and are appropriate for catching the attention of children.
+Red is used to highlight an incorrect answer and green for a correct answer.
+
+## Layout
+
+I decided the main page would benefit from housing the rule's of the game so they are instantly accessable by the user. It's big and clear to read. The small button at the bottom cant be missed because its the only other thing on the landing page.
+
+The header is always in view and acts as a link to the landing page in case the user would like to get a refresher of the rules, but as it's a very simplistic game, It may not be used as often.
+
+For the second page, each section spans the entire width of the window. I gave the answers container div smooth corners and a light coloured background so the answers would be the main focus using dark colours and white borders.
