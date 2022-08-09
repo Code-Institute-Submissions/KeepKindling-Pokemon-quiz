@@ -113,9 +113,37 @@ I used the website JSHint.com to check my javascript code and came up with no is
 
 ![JavaScript Validation](assets/images/javascript-validation.png)
 
+### Lighthouse Check
+
+100% across the board for all lighthouse checks!
+
+![Lighthouse Check](assets/images/lighthouse-check.png)
+
 
 ## Further Testing
 
 - I have tested all anchor links and they work properly with no bug's
 - I have pressed all buttons on both page's and they work correctly
 
+
+## Feature's for the Future
+
+- There would be a box exactly the same as the score box but it would display 
+a stopwatch to keep time of how long it take's users to complete the quiz
+
+- A pop up box that has a list of best score and time taken to finish it when finishing the quiz 
+and compare those to the result just completed of the quiz
+
+- Add an option for 10, 20, or 30 questions to really test a players knowledge
+
+- Have 3 different categories on specific topics that would be Pokemon, people and places
+
+
+## Deployment of Site
+
+The site was deployed to GitHub pages. The steps are as follows:
+1. Login to Github account and find your repo
+2. In the repository, go to the settings tab
+3. While in settings, look for and click on "pages"
+4. Click source and choose "main" or "master" and then (root)
+5. Finally click save and refresh the page and the page will display the url to your published site

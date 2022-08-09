@@ -7,7 +7,7 @@
 } 
    
 body {
-  background-image: url(/assets/images/background-image.jpg);
+  background-image: url(assets/images/background-image.jpg);
   color: black;
   text-align: center;
   font-family: Mako;
@@ -26,14 +26,13 @@ body {
 .button {
   background-color: #d47516;
   border: none;
-  color: white;
+  color: black;
   padding: 16px;
-  text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
   border: 2px solid white;
   width: 80%;
-  margin: 0.9rem;
+  margin: 0.8rem;
 }
 
 h1 {
@@ -88,14 +87,14 @@ a:hover {
   width: 90px;
   height: 50px;
   margin: 3px;
-  color: white;
+  color: black;
   background-color: gold;
   border: none;
 }
 
 .control-button:hover {
   color: gold;
-  background-color: white;
+  background-color: black;
   border: 2px solid gold;
 }
 
@@ -136,14 +135,5 @@ a:hover {
   width: 20%;
   height: 120px;
   margin: auto;
-  border: 2px solid gold;
-}
-
-#timer-box {
-  background-color: #d47516;
-  float: right;
-  width: 20%;
-  height: 120px;
-  margin-right: 300px;
   border: 2px solid gold;
 }
