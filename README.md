@@ -42,6 +42,8 @@ The main goals of this site are to:
 - Used a background generator website to custom build an appropriate and visually pleasing background with light colours
 - Used circles in the image to create a smooth feel to the site
 
+
+
 # Game page
 
 ## Question section
@@ -77,3 +79,43 @@ I decided the main page would benefit from housing the rule's of the game so the
 The header is always in view and acts as a link to the landing page in case the user would like to get a refresher of the rules, but as it's a very simplistic game, It may not be used as often.
 
 For the second page, each section spans the entire width of the window. I gave the answers container div smooth corners and a light coloured background so the answers would be the main focus using dark colours and white borders.
+
+## Technologie's Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Google Fonts
+- Git
+- Github
+
+# Testing 
+
+## Validator Testing
+
+I used the W3C Markup Validation Service to test my HTML code for my project and had no errors fortunately.
+
+- HTML Validation
+
+![HTML Validation](assets/images/html-validation.png)
+
+
+I used the W3C CSS Validation Service to test all CSS in my stylesheet and also came up with no errors.
+
+- CSS Validation
+
+![CSS Validation](assets/images/css-validation.png) 
+
+
+I used the website JSHint.com to check my javascript code and came up with no issues, only warning's that arent relevant to the actual code functioning properly
+
+- JavaScript Validation
+
+![JavaScript Validation](assets/images/javascript-validation.png)
+
+
+## Further Testing
+
+- I have tested all anchor links and they work properly with no bug's
+- I have pressed all buttons on both page's and they work correctly
+
