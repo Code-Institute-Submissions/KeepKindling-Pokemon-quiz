@@ -13,12 +13,6 @@ body {
   font-family: Mako;
 }
 
-#head {
-  font-size: 200%;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-
 #rules {
   font-size: 150%;
   width: 80%;
@@ -40,6 +34,19 @@ body {
   border: 2px solid white;
   width: 80%;
   margin: 0.9rem;
+}
+
+h1 {
+  font-size: 3.5em;
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline white;
 }
 
 .button.correct {
