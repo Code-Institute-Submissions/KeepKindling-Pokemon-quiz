@@ -1,19 +1,16 @@
 const startButton = document.getElementById('startButton');
-const questionContainerElement = document.getElementById('question-container');
-const answerElement = document.getElementById('answer');
-const questionElement = document.getElementById('question')
-const answerButtonElement = document.getElementById('answer-button')
-const answerBoxElement = document.getElementById('answer-box')
-const scoreElement = document.getElementById('score')
+const questionElement = document.getElementById('question');
+const answerButtonElement = document.getElementById('answer-button');
+const answerBoxElement = document.getElementById('answer-box');
   
-let integer = 0
-let shuffledQuestions, currentQuestionIndex
+let integer = 0;
+let shuffledQuestions, currentQuestionIndex;
 
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame);
 startButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    selectNextQuestion()
-  })
+    currentQuestionIndex++;
+    selectNextQuestion();
+  });
 
 /**
  * This function displays questions by searching inside the questions
@@ -21,19 +18,19 @@ startButton.addEventListener('click', () => {
  * relevant to the question displayed. 
  */
 function displayQuestion (question) {
-    questionElement.innerText = question.question
-    answerBoxElement.innerHTML = ''
+    questionElement.innerText = question.question;
+    answerBoxElement.innerHTML = '';
     question.answers.forEach(answer => {
-        console.log(answerButtonElement)
-        const button = document.createElement('button')
-        button.innerText = answer.text
-        button.classList.add('button')
+        console.log(answerButtonElement);
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('button');
         if (answer.correct) {
-            button.dataset.correct = answer.correct
+            button.dataset.correct = answer.correct;
         }
-        button.addEventListener('click', selectAnswer)
-        answerBoxElement.appendChild(button)
-    }) 
+        button.addEventListener('click', selectAnswer);
+        answerBoxElement.appendChild(button);
+    });
 }
 
 /**
@@ -42,7 +39,7 @@ function displayQuestion (question) {
  * are never in the same order as previous games.
  */
 function selectNextQuestion() {
-    displayQuestion(shuffledQuestions[currentQuestionIndex])
+    displayQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
 /**
@@ -50,12 +47,12 @@ function selectNextQuestion() {
  * the questions and calls the displayScore and selectNextQuestion functions.
  */
 function startGame() {
-    console.log("Game Started!")
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
-    integer = 0
-    displayScore()
-    selectNextQuestion()
+    console.log("Game Started!");
+    shuffledQuestions = questions.sort(() => Math.random() - .5);
+    currentQuestionIndex = 0;
+    integer = 0;
+    displayScore();
+    selectNextQuestion();
 }
 
 /**
@@ -64,22 +61,22 @@ function startGame() {
  * it should call incrementScore or the incrementIncorrect functions. 
  */
 function selectAnswer(e) {
-    let clickedButton = e.target
-    console.log(clickedButton)
-    let classToAdd
+    let clickedButton = e.target;
+    console.log(clickedButton);
+    let classToAdd;
     if (clickedButton.dataset.correct == 'true') {
-        incrementScore()
-        classToAdd = 'correct'
+        incrementScore();
+        classToAdd = 'correct';
     } else {
-        incrementIncorrect()
-        classToAdd = 'incorrect'
+        incrementIncorrect();
+        classToAdd = 'incorrect';
     }
 
-    clickedButton.classList.add(classToAdd)
+    clickedButton.classList.add(classToAdd);
     setTimeout(() => {
-        currentQuestionIndex++
-        selectNextQuestion()
-    },500)
+        currentQuestionIndex++;
+        selectNextQuestion();
+    },500);
 
 }
 
@@ -96,9 +93,9 @@ function displayScore () {
  * which is then displayed by calling the appropriate function.
  */
 function incrementScore() {
-    console.log('score + 1')
-    integer++
-	displayScore()
+    console.log('score + 1');
+    integer++;
+	displayScore();
 }
 
 /**
@@ -107,9 +104,8 @@ function incrementScore() {
  * as there is css the highlights the selected answer in red for incorrect.
  */
 function incrementIncorrect() {
-    console.log('score incorrect')
-    integer
-    displayScore()
+    console.log('score incorrect');
+    displayScore();
 }
 
 // This array houses all questions and choice answers relevant to them.
@@ -193,6 +189,6 @@ const questions = [{
         { text: '157', correct: false}
     ]
 },
-]
+];
 
 startGame();
