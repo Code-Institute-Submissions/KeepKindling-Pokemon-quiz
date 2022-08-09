@@ -5,16 +5,21 @@ const questionElement = document.getElementById('question')
 const answerButtonElement = document.getElementById('answer-button')
 const answerBoxElement = document.getElementById('answer-box')
 const scoreElement = document.getElementById('score')
- 
+  
 let integer = 0
 let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
-nextButton.addEventListener('click', () => {
+startButton.addEventListener('click', () => {
     currentQuestionIndex++
     selectNextQuestion()
   })
 
+/**
+ * This function displays questions by searching inside the questions
+ * array and creates buttons which are then filled with the answers 
+ * relevant to the question displayed. 
+ */
 function displayQuestion (question) {
     questionElement.innerText = question.question
     answerBoxElement.innerHTML = ''
@@ -31,10 +36,19 @@ function displayQuestion (question) {
     }) 
 }
 
+/**
+ * This function randomly shuffles the questions and it's
+ * answers inside the question index so the displayed questions 
+ * are never in the same order as previous games.
+ */
 function selectNextQuestion() {
     displayQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
+/**
+ * The first function used which uses the sort attribute to shuffle 
+ * the questions and calls the displayScore and selectNextQuestion functions.
+ */
 function startGame() {
     console.log("Game Started!")
     shuffledQuestions = questions.sort(() => Math.random() - .5)
@@ -44,6 +58,11 @@ function startGame() {
     selectNextQuestion()
 }
 
+/**
+ * This function notes which answer is selected and checks 
+ * whether its correct boolean is true and then determines if
+ * it should call incrementScore or the incrementIncorrect functions. 
+ */
 function selectAnswer(e) {
     let clickedButton = e.target
     console.log(clickedButton)
@@ -55,33 +74,45 @@ function selectAnswer(e) {
         incrementIncorrect()
         classToAdd = 'incorrect'
     }
-    // selectNextQuestion()
+
     clickedButton.classList.add(classToAdd)
     setTimeout(() => {
         currentQuestionIndex++
         selectNextQuestion()
-    }, 1000)
+    },500)
 
 }
 
+/**
+ * This function changes the text inside the element with 
+ * an id of score to integer(score) out of /10.
+ */
 function displayScore () {
     document.getElementById("score").innerText = integer + "/10";
 }
 
+/**
+ * This function logs a correct answer and adds 1 to the integer
+ * which is then displayed by calling the appropriate function.
+ */
 function incrementScore() {
     console.log('score + 1')
     integer++
 	displayScore()
 }
 
+/**
+ * This function logs incorrect answer and does not increment 
+ * to the integer but the user will know they got the answer wrong
+ * as there is css the highlights the selected answer in red for incorrect.
+ */
 function incrementIncorrect() {
     console.log('score incorrect')
-    let oldScore = parseInt(document.getElementById("score").innerText);
-	document.getElementById("score").innerText = oldScore + "/10";
+    integer
+    displayScore()
 }
 
-
-
+// This array houses all questions and choice answers relevant to them.
 const questions = [{
     question: 'How old was Ashe when he began his journey?',
     answers: [
