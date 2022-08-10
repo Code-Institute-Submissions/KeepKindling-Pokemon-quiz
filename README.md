@@ -1,5 +1,7 @@
 # Pokemon Quiz
 
+Check out the live site: [Pokemon Quiz](https://keepkindling.github.io/Pokemon-quiz/)
+
 # Project Overview
 
 A quiz is a great way to test your knowledge on any given subject and is fun to play with or against others. Even today people still enjoy a simple quiz every now and then.
@@ -80,6 +82,11 @@ The header is always in view and acts as a link to the landing page in case the 
 
 For the second page, each section spans the entire width of the window. I gave the answers container div smooth corners and a light coloured background so the answers would be the main focus using dark colours and white borders.
 
+## Responsitivity
+
+I have not used any media querys with this site as i ran out of time to implement them properly 
+but as the site is layed out simplistically, I tested the site on smaller devices and still look's good to use. 
+
 ## Technologie's Used
 
 - HTML5
@@ -138,6 +145,8 @@ and compare those to the result just completed of the quiz
 
 - Have 3 different categories on specific topics that would be Pokemon, people and places
 
+- I would add media querys so the site works solidly on all device's
+
 
 ## Deployment of Site
 
@@ -147,3 +156,11 @@ The site was deployed to GitHub pages. The steps are as follows:
 3. While in settings, look for and click on "pages"
 4. Click source and choose "main" or "master" and then (root)
 5. Finally click save and refresh the page and the page will display the url to your published site
+
+![Deployed Site](assets/images/published-site.png)
+
+## Credits
+
+- [GoogleFonts](https://fonts.google.com/)- Used to import the font "Mako" in various weights. Sans-serif was the backup font.
+- (slack Community) For giving little help every now and then
+- My mentor brian for great advice and guidance
