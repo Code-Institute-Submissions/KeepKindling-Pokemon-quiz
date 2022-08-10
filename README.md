@@ -26,12 +26,16 @@ The main goals of this site are to:
 
 ## Header
 
+![header](assets/images/header.png)
+
 - The largest part of the site and it's pages
 - designed to be kid friendly and easy to read
 - Name of the game always present
 - Acts as a link to the first page to allow users to remind themselves of the rule's
 
 ## Rules
+
+![Rules](assets/images/rules-container.png)
 
 - This section is short and to the point for user experience
 - Uses an easy to read font for the user
@@ -45,23 +49,31 @@ The main goals of this site are to:
 - Used circles in the image to create a smooth feel to the site
 
 
-
 # Game page
 
 ## Question section
+
+![Questions Container](assets/images/question-container.png)
 
 The questions section will automatically display a question that is randomly picked for the user to answer. It Uses black font as to be easily interpreted and discernable by the user. Has a slightly larger text to add to this aswell. I decided the page would look too cluttered if I gave it a background so left it alone. The questions are inside of an array and are randomly selected using the Math.random() attribute.
 
 ## Answer's section
 
+![Correct Answer](assets/images/correct-answer.png)
+![Incorrect Answer](assets/images/incorrect-answer.png)
+
 This box holds the different answer's that the user may pick from when making a decision. There are always three to choose from. The answers are inside of buttons that have been styled to have a white outline and a brown background as it fit's the color scheme and doesn't take away from the user's visual representation of the site. The correct answer will move randomly between these buttons so user's can't pick the same button for every question making an easy quiz.
 
 ## Score section
+
+![Score Container](assets/images/score-container.png)
 
 This small container is located underneath the answers container at the bottom of the screen and 
 keep's a record of how many questions the user has gotten correct out of /10. It utilizes the same colour's as the answer boxes but instead has a border of gold to keep them seperated. This way the user can easily discern they are different.
 
 ## Restart Game button
+
+![Restart Button](assets/images/restart-button.png)
 
 This last feature is at the bottom of the game page and when pressed, reverts the score to 0/10 and shuffles the questions again. The text is white while the background and border are brown and gold.
 
