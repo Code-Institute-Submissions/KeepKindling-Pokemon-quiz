@@ -74,6 +74,11 @@ function selectAnswer(e) {
     }
 
     clickedButton.classList.add(classToAdd);
+      // disable all buttons to prevent multiple clicks
+  answerBoxElement.childNodes.forEach(element => { 
+    element.disabled = true;
+});
+
     setTimeout(() => {
         currentQuestionIndex++;
         selectNextQuestion();
@@ -93,11 +98,13 @@ function displayScore () {
  * This function logs a correct answer and adds 1 to the integer
  * which is then displayed by calling the appropriate function.
  */
-function incrementScore() {
+ function incrementScore() {
     console.log('score + 1');
-    integer++;
-	displayScore();
+    integer += (integer > questions.length) ? 0 : 1; 
+    // to prevent integer from going over the length of the questions array
+    displayScore();
 }
+
 
 /**
  * This function logs incorrect answer and does not increment 
