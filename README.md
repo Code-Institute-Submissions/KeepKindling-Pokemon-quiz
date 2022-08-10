@@ -176,3 +176,4 @@ The site was deployed to GitHub pages. The steps are as follows:
 - [GoogleFonts](https://fonts.google.com/)- Used to import the font "Mako" in various weights. Sans-serif was the backup font.
 - (slack Community) For giving little help every now and then
 - My mentor brian for great advice and guidance
+- Web Dev Simplified (youtube) for some borrowed code

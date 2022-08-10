@@ -17,6 +17,7 @@ startButton.addEventListener('click', () => {
  * array and creates buttons which are then filled with the answers 
  * relevant to the question displayed. 
  */
+// Some code borrowed from Web Dev Simplified
 function displayQuestion (question) {
     questionElement.innerText = question.question;
     answerBoxElement.innerHTML = '';
